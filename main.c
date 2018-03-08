@@ -3,7 +3,7 @@
 #include<math.h>
 #include<string.h>
 
- char board[8][8]={"x"};
+ char board[8][8];
  //player structure
 struct player
 {
@@ -11,9 +11,14 @@ struct player
 	char colour[10];
 	int tokens;
 };
+
+void start();
+void printBoard();
 //main is used for players to assign their names and receive a random colour
 int main (void)
 {
+	start();
+	
 	struct player player1;
 	struct player player2;
 	printf("please enter player Ones Name\n");
@@ -39,15 +44,50 @@ int main (void)
 	}
 	printf("player 1 :%s\n",player1.colour);
 	printf("player 2 : %s\n",player2.colour);
+	
+	printBoard();
 }
 
-int start( )
+void start()
 {
-	
+	for(int i = 0; i < 8; i++)
+	{
+		for(int j = 0; j < 9; j++)
+		{
+			if((i == 3 && j == 3) || (i == 4 && j == 4))
+			{
+				board[i][j] = '1';
+			}
+			else if((i == 3 && j == 4) || (i == 4 && j == 3))
+			{
+				board[i][j] = '0';
+			}
+			else
+			{
+				board[i][j] = 'x';
+			}
+		}
+	}
 }
 
-int print( char board[8][8])
+void printBoard()
 {
+	int i, j;
 	
+	printf("%3c",' ');
+	for(i = 1; i <= 8; i++ )
+	{
+		printf("%3d", i);
+	}
+	printf("\n");
+	for(i = 0; i < 8; i++)
+	{
+		printf("%3d", (i+1));
+		for(j = 0; j < 8; j++)
+		{
+			printf("%3c", board[i][j]);
+		}
+		printf("\n");
+	}
 	
 }
