@@ -1,10 +1,10 @@
-	
+
 struct player(char name[]);
 
 struct board();
 
 struct disk();
 
-void start();
+void start(int y, struct board.grid[x][x]);
 
 void printBoard()

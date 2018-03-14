@@ -3,12 +3,12 @@
 #include<math.h>
 #include<string.h>
 
-#include "structures.h"
+#include "libraries.h"
 
 
 
 
-void start();
+void start(int y, struct board.grid[x][x])
 void printBoard();
 //main is used for players to assign their names and receive a random colour
 int main (void)
@@ -25,13 +25,13 @@ int main (void)
 	fgets(player1.name,20,stdin);
 	printf("please enter player Twos Name\n");
 	fgets(player2.name,20,stdin);
-	
+
 	//assigns tokens
 	player1.tokens=2;
 	player2.tokens=2;
 	player1.tokensLeft=30;
 	player2.tokensLeft=30;
-	
+
 	//temp is used for the if/ else
 	//this will assign player 1 & 2 a random colour to start the game
 	int temp = rand()%2;
@@ -47,7 +47,7 @@ int main (void)
 	//prints the colour the player has been assigned
 	printf("player 1 :%s\n",player1.colour);
 	printf("player 2 : %s\n",player2.colour);
-	
+
 	//while loop to keep track of turns and tokens left
 	while (totalplayed !=64)
 	{
@@ -57,7 +57,7 @@ int main (void)
 		player1.tokensLeft--;
 		player2.tokensLeft--;
 		totalTokens+=2;
-		
+
 	}
 	//prints the board
 	printBoard();

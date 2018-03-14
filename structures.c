@@ -1,3 +1,7 @@
+#include <stdio.h>
+#include<math.h>
+#include<string.h>
+
  //player structure
 struct player
 {
@@ -6,7 +10,7 @@ struct player
 	int tokens;
 	int tokensLeft;
 };
-//structures for the disk 
+//structures for the disk
 struct disks
 {
 	char colour[10];
@@ -14,12 +18,14 @@ struct disks
 }disk[64];
 
 struct board{
-	
-	grid[8][8];
-};
+
+	char grid[8][8];
+}board;
+
+int x=8;
 
 
-void start()
+void start(int y, struct board.grid[x][x])
 {
 	for(int i = 0; i < 8; i++)
 	{
@@ -44,7 +50,7 @@ void start()
 void printBoard()
 {
 	int i, j;
-	
+
 	printf("%3c",' ');
 	for(i = 1; i <= 8; i++ )
 	{
@@ -60,5 +66,5 @@ void printBoard()
 		}
 		printf("\n");
 	}
-	
+
 }
