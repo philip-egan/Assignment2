@@ -8,7 +8,7 @@
 
 
 
-void start(int y, struct board.grid[x][x])
+void start(int y, struct board.grid[x][x]);
 void printBoard();
 //main is used for players to assign their names and receive a random colour
 int main (void)
