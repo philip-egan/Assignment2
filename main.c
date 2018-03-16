@@ -3,18 +3,13 @@
 #include<math.h>
 #include<string.h>
 
-#include "libraries.h"
-
-
-
-
-void start(int y, struct board.grid[x][x]);
-void printBoard();
+#include "structures.h"
+int x=8;
 //main is used for players to assign their names and receive a random colour
 int main (void)
 {
 	// starts the program
-	start();
+	void start(int x, struct board.grid[x][x]);
 
 	int totalTokens=0;
 	//initializes the variables for player 1 and 2
@@ -49,14 +44,10 @@ int main (void)
 	printf("player 2 : %s\n",player2.colour);
 
 	//while loop to keep track of turns and tokens left
-	while (totalplayed !=64)
+	int totalPlayed;
+	while (totalPlayed !=64)
 	{
 		//turns will go here
-		player1.tokens++;
-		player2.tokens++;
-		player1.tokensLeft--;
-		player2.tokensLeft--;
-		totalTokens+=2;
 
 	}
 	//prints the board

@@ -2,11 +2,13 @@
 #include<math.h>
 #include<string.h>
 
+#include "structures.h"
+
  //player structure
 struct player
 {
-	char name[20];
-	char colour[10];
+	char name;
+	char colour;
 	int tokens;
 	int tokensLeft;
 };
@@ -22,10 +24,10 @@ struct board{
 	char grid[8][8];
 }board;
 
-int x=8;
 
 
-void start(int y, struct board.grid[x][x])
+
+void start(int x, struct board.grid[x][x])
 {
 	for(int i = 0; i < 8; i++)
 	{
