@@ -12,6 +12,7 @@ struct player
 	int tokens;
 	int tokensLeft;
 };
+
 //structures for the disk
 struct disks
 {
@@ -19,14 +20,13 @@ struct disks
 	int position[2];
 }disk[64];
 
+//structure for the board
 struct board{
 
 	char grid[8][8];
 }board;
 
-
-
-
+//start initializes board struct at the beginning of a new game
 void start(int x, struct board.grid[x][x])
 {
 	for(int i = 0; i < 8; i++)
@@ -49,6 +49,7 @@ void start(int x, struct board.grid[x][x])
 	}
 }
 
+//printBoard prints the current state of the board as players make moves
 void printBoard()
 {
 	int i, j;
